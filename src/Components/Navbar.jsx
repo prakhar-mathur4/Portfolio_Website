@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
 import { Link } from "react-scroll";
+import logo from "../assets/Prakhar_mathur_logoWhite.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4">
       <div>
         <figure className="w-16 h-16 ml-2 md:ml-72">
-          <img src="src/assets/Prakhar_mathur_logoWhite.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </figure>
       </div>
 

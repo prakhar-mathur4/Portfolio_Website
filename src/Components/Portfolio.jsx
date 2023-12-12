@@ -1,4 +1,8 @@
 import React from "react";
+import Gymwebsite from "../assets/Gymwebsite.png";
+import ecom from "../assets/ecom.png";
+import jobportal from "../assets/jobportal.png";
+import signlang from "../assets/signlang.png";
 const Portfolio = () => {
   const portfolios = [
     {
@@ -20,28 +24,28 @@ const Portfolio = () => {
       name: "Sign Language Detection",
       domain: "Machine Learning & Deep Learning",
       link: "https://github.com/prakhar-mathur4/Sign-Language-Recognition-System/tree/main",
-      src: "./src/assets/signlang.png",
+      src: signlang,
     },
     {
       id: 4,
       name: "Ecommerce Project",
       domain: "Frontend Website with Ecommerce functionality",
       link: "https://6570a7f90f58ec161970fb6f--aquamarine-malabi-a15292.netlify.app/",
-      src: "./src/assets/ecom.png",
+      src: ecom,
     },
     {
       id: 5,
       name: "Job Portal",
       domain: "Fullstack website using Firebase",
       link: "https://pcas-job-portal.vercel.app/",
-      src: "./src/assets/jobportal.png",
+      src: jobportal,
     },
     {
       id: 3,
       name: "Fitclub Gym Website",
       domain: "Frontend Website",
       link: "https://65664545a7cccb0c94a37575--phenomenal-queijadas-e0a852.netlify.app/",
-      src: "./src/assets/Gymwebsite.png",
+      src: Gymwebsite,
     },
   ];
 
