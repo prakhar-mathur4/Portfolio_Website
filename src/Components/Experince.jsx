@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="pt-[50rem] md:pt-36 w-screen min-h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      className="pt-[50rem] md:pt-96  block w-screen min-h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto">
         <div className="pb-8">
