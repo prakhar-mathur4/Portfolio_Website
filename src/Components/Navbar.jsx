@@ -56,17 +56,17 @@ const Navbar = () => {
         {/* Resume button */}
         <li>
           <div>
-            <Link
-              to="#"
-              smooth
-              duration={500}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1tSEY1NWGAf4EGPlyCFDC09mNp7bIvPsz/view?usp=sharing"
               className="group text-white w-fit px-5 py-3 my-2 flex items-center rounded-md bg-gradient-to-l from-[#60efff] to-[#0061ff] cursor-pointer"
             >
               Resume
               <span className="">
                 <HiOutlineDownload size={25} className="ml-1" />
               </span>
-            </Link>
+            </a>
           </div>
         </li>
       </ul>
