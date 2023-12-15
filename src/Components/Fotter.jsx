@@ -8,7 +8,7 @@ const Fotter = () => {
   return (
     <div
       name="contact"
-      className=" h-36 bg-gradient-to-b from-black to-black p-4 text-white"
+      className=" h-36 w-screen bg-gradient-to-b from-black to-black p-4 text-white"
     >
       <hr className="w-auto" />
       {/* Logo */}

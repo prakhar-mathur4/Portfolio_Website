@@ -7,14 +7,14 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      name: "House Price Predection",
+      name: "House Price Prediction",
       domain: "Machine Learning & Data Analytics",
       link: "https://github.com/prakhar-mathur4/House-Price-Predction",
       src: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*5lksNVWUW8prwtwOAiq1pQ.jpeg",
     },
     {
       id: 2,
-      name: "Customer Churn Predection",
+      name: "Customer Churn Prediction",
       domain: "Machine Learning & Data Analytics",
       link: "https://github.com/prakhar-mathur4/Churn-prediction-Reliance-Jio-Info-COMM-Limited-Telecom-Industry-",
       src: "https://cdn.analyticsvidhya.com/wp-content/uploads/2019/05/customer-churn-edit.jpeg",
@@ -52,7 +52,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className=" pt-[55rem] md:pt-0 bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className=" pt-[55rem] md:pt-0 bg-gradient-to-b from-black to-gray-800 w-screen text-white md:h-screen"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">

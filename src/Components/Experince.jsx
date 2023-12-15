@@ -42,19 +42,21 @@ const Experience = () => {
                 Couchbase
               </li>
               <li className="mb-2">
-                2. Development role to build small utilities and monitoring
-                framework for proactive production monitoring. This involves
-                development on the following stack: Python, PostgreSQL, Jenkins,
-                Docker.
+                2. SRE Tech Radar: Developed an interactive radar using ReactJS
+                & TailwindCSS showcasing technology advancement, integrating and
+                resolving UI/UX challenges.
               </li>
               <li className="mb-2">
-                3. Daily trouble ticket resolution, client interaction and
-                customer support via email and calls.
+                3. Data Governance: Data Quality Analyst my primary
+                responsibility is to ensure the accuracy, consistency, and
+                reliability of data within an organization systems and
+                PostgreSQL databases. Maintaining reliable data for
+                decision-making processes, ensuring that the data used across
+                the organization is accurate, consistent, and trustworthy.
               </li>
               <li className="mb-2">
-                4. Troubleshooting the production issue to the level where I
-                pinpoint the exact component/module that is creating problems in
-                production.
+                4. Develop python automation and solutions to simplify the
+                operation and monitoring of the microservices.
               </li>
               <li className="mb-2">
                 5. Develop automation and solutions to simplify the operation
