@@ -1,10 +1,10 @@
 image: node:latest
 
 stages:
-  - deploy
+  - stage
 
 deploy_stage:
-  stage: deploy_stage
+  stage: stage
   script:
     - echo "REACT_APP_BASE_URL=https://culturenet-apis.netlify.app/.netlify/functions/api" >> ".env"
     - npm install --legacy-peer-deps
