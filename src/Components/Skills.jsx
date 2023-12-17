@@ -88,7 +88,7 @@ const Experience = () => {
       id: 9,
       src: sklearn,
 
-      title: "Skit-Learn",
+      title: "Sckit-Learn",
       style: "shadow-orange-400",
     },
     {
