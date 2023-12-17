@@ -14,7 +14,7 @@ const About = () => {
         </div>
 
         <p className="text-lg mt-20 text-justify">
-          Hello there! I'm Prakhar Mohan Mathur, an Engineer based in{" "}
+          Hello there! I'm Prakhar Mathur, an Engineer based in{" "}
           <span className="text-orange-300">IN</span>
           <span className="text-blue-500">D</span>
           <span className="text-green-300">IA</span>, holding a Bachelor's in
