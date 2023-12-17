@@ -3,8 +3,8 @@ image: node:latest
 stages:
   - deploy
 
-deploy_prod:
-  stage: deploy
+deploy_stage:
+  stage: deploy_stage
   script:
     - echo "REACT_APP_BASE_URL=https://culturenet-apis.netlify.app/.netlify/functions/api" >> ".env"
     - npm install --legacy-peer-deps
@@ -12,4 +12,4 @@ deploy_prod:
     - npm run build
     - netlify deploy --dir "dist" --auth $AUTH_TOKEN --site $SITE_ID_STAGE --prod
   only:
-    - main
+    - stage
