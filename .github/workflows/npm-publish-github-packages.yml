@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: "latest"
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - name: Clean and install dependencies
+        run: |
+          rm -rf node_modules
+          npm ci --legacy-peer-deps
 
       - name: Ensure Vite Permissions
         run: chmod +x ./node_modules/.bin/vite
