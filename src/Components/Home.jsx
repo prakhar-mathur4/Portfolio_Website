@@ -15,7 +15,7 @@ const Home = () => {
             I'm Prakhar Mathur
           </h2>
           <p className=" text-slate-400 py-4 max-w-md text-3xl">
-            Frontend Developer | Site Reliability Engineer | DevOps | Data
+            Site Reliability Engineer | DevOps | Frontend Developer | Data
             Analyst | Machine Learning Engineer
           </p>
 
