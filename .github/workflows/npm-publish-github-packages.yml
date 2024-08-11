@@ -16,8 +16,8 @@ jobs:
       - name: Set environment variable
         run: echo "REACT_APP_BASE_URL=https://culturenet-apis.netlify.app/.netlify/functions/api" >> .env
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3git
         with:
           node-version: "latest"
 
@@ -25,10 +25,10 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Install Netlify CLI
-        run: npm install netlify-cli -g
+        run: npm install -g netlify-cli
 
-      - name: Build
+      - name: Build the project
         run: npm run build
 
       - name: Deploy to Netlify Production
-        run: netlify deploy --dir "dist" --auth ${{ secrets.AUTH_TOKEN }} --site ${{ secrets.SITE_ID_STAGE }} --prod
+        run: netlify deploy --dir "dist" --auth ${{ secrets.AUTH_TOKEN }} --site ${{ secrets.SITE_ID_PROD }} --prod

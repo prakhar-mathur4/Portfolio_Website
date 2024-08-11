@@ -17,7 +17,7 @@ const About = () => {
           Hello there! I'm Prakhar Mathur, an Engineer based in{" "}
           <span className="text-orange-300">IN</span>
           <span className="text-blue-500">D</span>
-          <span className="text-green-300">IA</span>, holding a Bachelor's in
+          <span className="text-green-300">IA</span>, with a Bachelor's in
           Information Technology from Poornima College of Engineering. I'm a
           tech enthusiast passionate about merging the worlds of technology and
           innovation.{" "}
@@ -26,12 +26,14 @@ const About = () => {
             Science, Data Analytics, and Machine Learning. I have expertise
             spanning diverse domains.
           </span>{" "}
-          On one end, I thrive in crafting immersive frontend experiences,
-          sculpting user interfaces that captivate and engage. Simultaneously,
-          my love for numbers and patterns has led me into the realm of Data
-          Science and Data Analytics, where I unravel insights from complex
-          datasets. Moreover, my journey into Machine Learning involves crafting
-          intelligent systems that learn and evolve.
+          On one hand, I excel in optimizing product applications, ensuring they
+          are robust, reliable, and efficient through rigorous application
+          monitoring and production support. My technical expertise allows me to
+          design and implement solutions that keep systems performing at their
+          peak. On the other hand, my fascination with both frontend development
+          and data science enables me to create captivating, user-friendly
+          interfaces and extract meaningful insights from complex data sets,
+          blending creativity with analytical precision.
         </p>
 
         <br />
@@ -43,20 +45,17 @@ const About = () => {
             I'm driven by the desire to apply these proficiencies in meaningful
             ways.
           </span>{" "}
-          My work interests are multifaceted, ranging from ML engineering to
-          Frontend Development, from DevOps to Site Reliability Engineering
-          (SRE), and diving deep into the world of Data Analytics. My motivation
-          stems from the convergence of these diverse fields. I'm constantly
-          searching for chances to combine user-centric design with data-driven
-          insights or to incorporate the complexities of machine learning into
-          reliable systems. If you're seeking someone passionate about these
-          intersecting domains, someone who can seamlessly blend tech prowess
-          with innovative solutions, let's connect!{" "}
+          ranging from ML engineering to frontend development, DevOps, and
+          diving deep into data analytics. My motivation stems from the
+          convergence of these diverse fields, constantly seeking to combine
+          user-centric design with data-driven insights and incorporate the
+          complexities of machine learning into reliable systems.{" "}
           <span className=" font-bold text-blue-300">
             {" "}
-            Whether it's crafting an intuitive Frontend, optimizing systems
-            through ML, or diving deep into data analytics, I'm ready to embark
-            on these ventures together.
+            Whether it’s creating engaging frontend experiences, optimizing
+            applications for peak performance, or leveraging data science to
+            extract actionable insights, I’m excited to embrace these challenges
+            and drive progress through innovative solutions.
           </span>
         </p>
       </div>
