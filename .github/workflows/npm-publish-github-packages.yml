@@ -37,4 +37,4 @@ jobs:
         run: npm install -g netlify-cli
 
       - name: Deploy to Netlify Production
-        run: netlify deploy --dir "dist" --auth ${{ secrets.AUTH_TOKEN }} --site ${{ secrets.SITE_ID_PROD }} --prod
+        run: netlify deploy --dir "dist" --auth ${{ secrets.AUTH_TOKEN }} --site ${{ secrets.SITE_ID_STAGE }} --prod
