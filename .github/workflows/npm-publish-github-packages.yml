@@ -17,7 +17,7 @@ jobs:
         run: echo "REACT_APP_BASE_URL=https://culturenet-apis.netlify.app/.netlify/functions/api" >> .env
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3git
+        uses: actions/setup-node@v3
         with:
           node-version: "latest"
 
