@@ -30,7 +30,7 @@ Here's what powers my portfolio:
 - **Sleek Design:**  A modern and responsive design that looks good on any device. 📱💻
 - **Interactive Elements:** Smooth animations and transitions powered by Framer Motion.  💨
 - **Project Showcase:**  A curated collection of my best projects, highlighting my skills and experience.  📂
-- **Blog Integration:**  Sharing my thoughts and insights on tech topics. ✍️ Comming soon....!!!!
+- **Blog Integration:**  Sharing my thoughts and insights on tech topics. ✍️ Coming soon....!!!!
 
 
 ## Let's Connect! 🤝
@@ -38,4 +38,4 @@ Here's what powers my portfolio:
 Feel free to reach out!
 
 - Email: [mathurprakhar1@gmail.com](mailto:mathurprakhar1@gmail.com)
-- LinkedIn: [[Click Here](https://www.linkedin.com/in/mathurprakhar1/)]
+- LinkedIn: [Click Here](https://www.linkedin.com/in/mathurprakhar1/)
