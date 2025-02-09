@@ -3,7 +3,8 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter"; // Importing the Typewriter component
-import image from "../assets/Myimage2.jpg";
+// import image from "../assets/Myimage2.jpg";
+import image from "../assets/IMG_20241122_155102115.jpg";
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
               <Typewriter
                 words={[
                   "Site Reliability Engineer",
-                  "DevOps",
+                  "DevOps Engineer",
                   "Frontend Developer",
                   "Data Analyst",
                   "Machine Learning Engineer",
@@ -65,7 +66,7 @@ const Home = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center items-center">
+        <div className="w-full md:w-full md:h-full flex justify-center items-center">
           <div className="rounded-2xl overflow-hidden w-full md:w-10/12 lg:w-11/12 xl:w-full">
             <img
               src={image}
