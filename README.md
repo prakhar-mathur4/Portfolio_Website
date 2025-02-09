@@ -1,6 +1,6 @@
 #  My Portfolio - Prakhar Mathur 
 
-Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  *(Optional: Add a cool GIF or screenshot here)*
+Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  (https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2xoaW0yNXl0YzczZHNkNXRpdmdsNDNranN6NGE4bDU1d2hibnpoMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SVH9y2LQUVVCRcqD7o/giphy.gif)
 
 
 ## Table of Contents
