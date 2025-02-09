@@ -2,15 +2,12 @@
 
 Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  *(Optional: Add a cool GIF or screenshot here)*
 
-[If your code is on GitHub, add this line: Peep the code on GitHub: [link-to-your-github-repository] 💻]
 
 ## Table of Contents
 
 - [About Me](#about-me)
 - [Tech Stack](#tech-stack)
 - [Cool Features](#cool-features)
-- [Getting Started (For Devs)](#getting-started-for-devs)
-- [Let's Connect!](#lets-connect) *(Optional)*
 
 ## About Me <img src="https://emojis.wiki/thumbs-up-medium-skin-tone/thumbs-up-medium-skin-tone.png" alt="Thumbs Up" width="20">
 
@@ -36,9 +33,9 @@ Here's what powers my portfolio:
 - **Blog Integration:**  Sharing my thoughts and insights on tech topics. ✍️ Comming soon....!!!!
 
 
-## Let's Connect! 🤝 *(Optional)*
+## Let's Connect! 🤝
 
 Feel free to reach out!
 
 - Email: [mathurprakhar1@gmail.com](mailto:mathurprakhar1@gmail.com)
-- LinkedIn: [[your_linkedin_profile](https://www.linkedin.com/in/mathurprakhar1/)]([your_linkedin_profile](https://www.linkedin.com/in/mathurprakhar1/))
+- LinkedIn: [[Click Here](https://www.linkedin.com/in/mathurprakhar1/)]
