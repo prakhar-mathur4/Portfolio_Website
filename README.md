@@ -1,7 +1,7 @@
 #  My Portfolio - Prakhar Mathur 
 
 Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  
-<div class="tenor-gif-embed" data-postid="345284205728757231" data-share-method="host" data-aspect-ratio="0.566265" data-width="100%"><a href="https://tenor.com/view/stay-cool-gif-345284205728757231">Stay Cool GIF</a>from <a href="https://tenor.com/search/stay+cool-gifs">Stay Cool GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ Hey there! 👋 Welcome to my digital space where I showcase my skills and proje
 
 ## About Me <img src="https://emojis.wiki/thumbs-up-medium-skin-tone/thumbs-up-medium-skin-tone.png" alt="Thumbs Up" width="20">
 
-I'm Prakhar, a tech enthusiast passionate about building awesome stuff!  I love diving into the world of SRE, automating everything with DevOps, crafting sleek web experiences, and exploring the magic of Machine Learning.  This portfolio is where I share my projects, blog posts, and open-source contributions.  I'm always learning and leveling up my skills.  Hit me up if you want to chat about tech, collaborate on projects, or just geek out! 🤓
+I'm Prakhar, a tech enthusiast passionate about building awesome stuff!  I love diving into the world of SRE, automating everything with DevOps, crafting sleek web experiences, and exploring the magic of Machine Learning.  This portfolio is where I share my projects, blog posts, and open-source contributions.  I'm always learning and levelling up my skills.  Hit me up if you want to chat about tech, collaborate on projects, or just geek out! 🤓
 
 ## Tech Stack 🛠️
 
