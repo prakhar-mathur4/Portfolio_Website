@@ -1,7 +1,7 @@
 #  My Portfolio - Prakhar Mathur 
 
-Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  [y](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2xoaW0yNXl0YzczZHNkNXRpdmdsNDNranN6NGE4bDU1d2hibnpoMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/SVH9y2LQUVVCRcqD7o/giphy.gif)
-
+Hey there! 👋 Welcome to my digital space where I showcase my skills and projects across SRE, DevOps, Web Dev, and even a sprinkle of ML! ✨ Check out the live site: [prakharmathur.in](https://prakharmathur.in)  
+<div class="tenor-gif-embed" data-postid="345284205728757231" data-share-method="host" data-aspect-ratio="0.566265" data-width="100%"><a href="https://tenor.com/view/stay-cool-gif-345284205728757231">Stay Cool GIF</a>from <a href="https://tenor.com/search/stay+cool-gifs">Stay Cool GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 ## Table of Contents
 
