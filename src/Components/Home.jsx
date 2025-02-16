@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter"; // Importing the Typewriter component
 // import image from "../assets/Myimage2.jpg";
-import image from "../assets/IMG_20241122_155102115.jpg";
+import image from "../assets/IMG_20241122_155102115(1).jpg";
 
 const Home = () => {
   return (
