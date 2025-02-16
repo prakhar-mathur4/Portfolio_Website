@@ -20,38 +20,36 @@ const About = () => {
           <span className="text-orange-300">IN</span>
           <span className="text-blue-500">D</span>
           <span className="text-green-300">IA</span>, with a Bachelor's in
-          Information Technology from Poornima College of Engineering. I'm a
-          tech enthusiast passionate about merging the worlds of technology and
-          innovation.{" "}
+          Information Technology from Poornima College of Engineering. I thrive
+          at the intersection of cloud infrastructure, DevOps, and reliability
+          engineering, ensuring that systems not only stay up but stay fast,
+          efficient, and resilient.{" "}
           <span className="font-semibold text-blue-300">
-            My skill set revolves around a fusion of Frontend Development, Data
-            Science, Data Analytics, and Machine Learning. I have expertise
-            spanning diverse domains.
+            I specialize in Kubernetes monitoring, cloud automation, and
+            incident management, making sure applications don’t just run but run
+            like a well-oiled machine. Whether it’s optimizing performance,
+            automating alerts, or debugging production issues at 3 AM, I get the
+            job done.
           </span>
         </p>
 
         <p className="text-sm sm:text-base md:text-lg mt-4 text-justify">
-          On one hand, I excel in optimizing product applications, ensuring they
-          are robust, reliable, and efficient through rigorous application
-          monitoring and production support. My technical expertise allows me to
-          design and implement solutions that keep systems performing at their
-          peak. On the other hand, my fascination with both frontend development
-          and data science enables me to create captivating, user-friendly
-          interfaces and extract meaningful insights from complex data sets,
-          blending creativity with analytical precision.
+          For me, SRE isn’t just about fixing things—it’s about building better,
+          self-healing systems that keep businesses running smoothly. I geek out
+          over observability tools, container orchestration, and SLIs/SLAs,
+          making sure users have a seamless experience while we crush downtime.
         </p>
 
         <p className="text-sm sm:text-base md:text-lg mt-4 text-justify">
-          I'm not just about skills;{" "}
+          {/* I'm not just about skills;{" "} */}
           <span className="font-bold text-blue-300">
-            I'm driven by the desire to apply these proficiencies in meaningful
-            ways.
+            When I’m not busy scaling Kubernetes clusters or setting up killer
+            Grafana dashboards, you’ll find me tinkering with frontend
+            development, exploring data science, or just chilling with some good
+            Aussie humor (Oi! 😆).
           </span>{" "}
-          Ranging from ML engineering to frontend development, DevOps, and
-          diving deep into data analytics. My motivation stems from the
-          convergence of these diverse fields, constantly seeking to combine
-          user-centric design with data-driven insights and incorporate the
-          complexities of machine learning into reliable systems.
+          Always up for new challenges, tech banter, and cool projects—let’s
+          connect and make the internet a more reliable place! 💻✨
         </p>
       </div>
     </div>

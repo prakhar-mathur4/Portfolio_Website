@@ -27,6 +27,7 @@ const Experience = () => {
               "Automated alerting for critical Kubernetes events using Prometheus and Alertmanager, reducing response time by 60%.",
               "Developed comprehensive dashboards and alerts in Grafana and New Relic to improve monitoring efficiency.",
               "Defined, monitored, and improved SLOs, SLIs, and SLAs to ensure alignment with business goals.",
+              "Configured Prometheus alerts for Kubernetes workloads, monitoring pod crashes, deployment failures, resource exhaustion, and cluster health to enhance proactive incident management.",
             ],
           },
           {

@@ -66,7 +66,7 @@ const Navbar = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1tSEY1NWGAf4EGPlyCFDC09mNp7bIvPsz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1XZUV8UJaaP6FdoxNIhHCHc8lwkO1_idG/view?usp=drive_link"
               className="relative text-white w-fit px-4 py-2 lg:px-5 lg:py-3 flex items-center overflow-hidden rounded-md bg-gradient-to-l from-[#60efff] to-[#0061ff] cursor-pointer"
             >
               <span className="relative z-10 flex items-center">
