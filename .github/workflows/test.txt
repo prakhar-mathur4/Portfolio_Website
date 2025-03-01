@@ -1,0 +1,46 @@
+# name: Deploy to Production
+
+# on:
+#   push:
+#     branches:
+#       - stage
+
+# jobs:
+#   deploy_prod:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#        - name: Install Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
+#           cache: npm
+
+#       - name: Set environment variable
+#         run: echo "REACT_APP_BASE_URL=https://culturenet-apis.netlify.app/.netlify/functions/api" >> .env
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "latest"
+
+#       - name: Clean and install dependencies
+#         run: |
+#           rm -rf node_modules
+#           npm ci --legacy-peer-deps
+
+#       - name: Ensure Vite Permissions
+#         run: chmod +x ./node_modules/.bin/vite
+
+#       - name: Build the project
+#         run: npm run build
+#         shell: bash
+
+#       - name: Install Netlify CLI
+#         run: npm install -g netlify-cli
+
+#       - name: Deploy to Netlify Production
+#         run: netlify deploy --dir "dist" --auth ${{ secrets.AUTH_TOKEN }} --site ${{ secrets.SITE_ID_STAGE }} --prod

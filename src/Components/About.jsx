@@ -20,10 +20,10 @@ const About = () => {
           <span className="text-orange-300">IN</span>
           <span className="text-blue-500">D</span>
           <span className="text-green-300">IA</span>, with a Bachelor's in
-          Information Technology from Poornima College of Engineering. I thrive
-          at the intersection of cloud infrastructure, DevOps, and reliability
-          engineering, ensuring that systems not only stay up but stay fast,
-          efficient, and resilient.{" "}
+          Information Technology from Poornima College of Engineering,Jaipur. I
+          thrive at the intersection of cloud infrastructure, DevOps, and
+          reliability engineering, ensuring that systems not only stay up but
+          stay fast, efficient, and resilient.{" "}
           <span className="font-semibold text-blue-300">
             I specialize in Kubernetes monitoring, cloud automation, and
             incident management, making sure applications don’t just run but run
