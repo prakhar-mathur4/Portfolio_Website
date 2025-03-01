@@ -25,27 +25,29 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Verify Vite Installation
-        run: npx vite --version
-
       - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite
+        run: chmod +x node_modules/.bin/vite || true
 
       - name: Build the Project
         run: npm run build
 
       - name: Deploy to GitHub Pages
         run: |
+          # Fetch latest gh-pages branch
           git fetch origin gh-pages
-          git checkout gh-pages || git checkout -b gh-pages
+
+          # Switch to gh-pages branch
+          git checkout gh-pages
 
           # Remove all files EXCEPT 'CNAME'
           find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
 
-          # Copy new build files from dist/ to root of gh-pages
-          rsync -av dist/ . --delete
+          # Copy new dist files into root of gh-pages
+          cp -r dist/* .
 
           # Stage and commit changes
           git add --all
           git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
+
+          # Push updates to gh-pages branch
           git push origin gh-pages
