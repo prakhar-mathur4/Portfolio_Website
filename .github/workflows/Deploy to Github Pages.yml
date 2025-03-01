@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - stage # Runs when pushing to 'stage' branch
+      - stage # Runs when you push to the 'stage' branch
 
 permissions:
   contents: write
@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Stage Branch
         uses: actions/checkout@v4
+        with:
+          ref: stage # Ensure we are on the stage branch
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -23,31 +25,27 @@ jobs:
           cache: npm
 
       - name: Install Dependencies
-        run: npm ci
-
-      - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite || true
+        run: npm install
 
       - name: Build the Project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Checkout gh-pages Branch
         run: |
-          # Fetch latest gh-pages branch
           git fetch origin gh-pages
-
-          # Switch to gh-pages branch
           git checkout gh-pages
 
-          # Remove all files EXCEPT 'CNAME'
-          find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
+      - name: Remove Old Files Except CNAME
+        run: find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
 
-          # Copy new dist files into root of gh-pages
+      - name: Copy New Build Files from Stage Branch
+        run: |
+          git checkout stage -- dist
           cp -r dist/* .
+          rm -rf dist  # Clean up the dist folder
 
-          # Stage and commit changes
+      - name: Deploy to GitHub Pages
+        run: |
           git add --all
           git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
-
-          # Push updates to gh-pages branch
-          git push origin gh-pages
+          git push origin gh-pages --force
