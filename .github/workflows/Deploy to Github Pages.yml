@@ -16,6 +16,7 @@ jobs:
       - name: Checkout Stage Branch
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: stage # Get the 'stage' branch
 
       - name: Set Up Git User
