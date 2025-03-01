@@ -24,11 +24,13 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install Dependencies
-        run: npm install # Use npm install instead of npm ci
+      - name: Clean Install Dependencies
+        run: |
+          rm -rf node_modules package-lock.json  # Remove old dependencies
+          npm install  # Fresh install
 
       - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite # Ensure Vite can execute
+        run: chmod +x node_modules/.bin/vite # Ensure Vite has execution permissions
 
       - name: Build the Project
         run: npm run build
