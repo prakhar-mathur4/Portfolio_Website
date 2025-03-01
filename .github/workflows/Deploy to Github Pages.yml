@@ -16,29 +16,25 @@ jobs:
       - name: Checkout Stage Branch
         uses: actions/checkout@v4
         with:
-          ref: stage # Checkout the 'stage' branch
+          ref: stage # Get the 'stage' branch
 
-      - name: Copy Build Files
-        run: |
-          # Create a temporary folder to store build files
-          mkdir temp_dist
-          cp -r dist/* temp_dist/
-
-      - name: Switch to gh-pages Branch
+      - name: Fetch and Switch to gh-pages Branch
         run: |
           git fetch origin gh-pages
           git checkout gh-pages || git checkout -b gh-pages
 
-          # Remove all files except 'CNAME'
+      - name: Remove All Files Except CNAME
+        run: |
           find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
 
-      - name: Move Copied Files to Root
+      - name: Copy Files from Stage Branch’s dist/ Folder
         run: |
-          cp -r temp_dist/* .
-          rm -rf temp_dist  # Clean up temporary folder
+          git checkout stage -- dist  # Get the latest dist folder from stage
+          cp -r dist/* .  # Move the contents to root
+          rm -rf dist  # Clean up
 
       - name: Commit and Push Changes
         run: |
           git add --all
-          git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
+          git commit -m "Deployed from stage to gh-pages on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
           git push origin gh-pages --force
