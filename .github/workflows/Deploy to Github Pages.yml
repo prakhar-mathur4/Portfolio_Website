@@ -18,10 +18,16 @@ jobs:
         with:
           ref: stage # Get the 'stage' branch
 
+      - name: Set Up Git User
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Fetch and Switch to gh-pages Branch
         run: |
-          git fetch origin gh-pages
-          git checkout gh-pages || git checkout -b gh-pages
+          git fetch origin gh-pages || true
+          git switch gh-pages || git checkout -b gh-pages
+          git pull origin gh-pages --rebase || true
 
       - name: Remove All Files Except CNAME
         run: |
@@ -29,7 +35,7 @@ jobs:
 
       - name: Copy Files from Stage Branch’s dist/ Folder
         run: |
-          git checkout stage dist\assets dist\index.html dist\favicon.ico
+          git checkout stage -- dist/assets dist/index.html dist/favicon.ico
 
       - name: Commit and Push Changes
         run: |
