@@ -1,45 +1,45 @@
-name: Deploy to GitHub Pages
+# name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - stage # Runs when new changes are pushed to 'stage' branch
+# on:
+#   push:
+#     branches:
+#       - stage # Runs when new changes are pushed to 'stage' branch
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Stage Branch
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: stage # Get the 'stage' branch
+#     steps:
+#       - name: Checkout Stage Branch
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#           ref: stage # Get the 'stage' branch
 
-      - name: Set Up Git User
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+#       - name: Set Up Git User
+#         run: |
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Fetch and Switch to gh-pages Branch
-        run: |
-          git fetch origin gh-pages || true
-          git switch gh-pages || git checkout -b gh-pages
-          git pull origin gh-pages --rebase || true
+#       - name: Fetch and Switch to gh-pages Branch
+#         run: |
+#           git fetch origin gh-pages || true
+#           git switch gh-pages || git checkout -b gh-pages
+#           git pull origin gh-pages --rebase || true
 
-      - name: Remove All Files Except CNAME
-        run: |
-          find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
+#       - name: Remove All Files Except CNAME
+#         run: |
+#           find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
 
-      - name: Copy Files from Stage Branch’s dist/ Folder
-        run: |
-          git checkout stage -- dist/assets dist/index.html dist/favicon.ico
+#       - name: Copy Files from Stage Branch’s dist/ Folder
+#         run: |
+#           git checkout stage -- dist/assets dist/index.html dist/favicon.ico
 
-      - name: Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Deployed from stage to gh-pages on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
-          git push origin gh-pages --force
+#       - name: Commit and Push Changes
+#         run: |
+#           git add .
+#           git commit -m "Deployed from stage to gh-pages on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
+#           git push origin gh-pages --force
