@@ -23,7 +23,13 @@ jobs:
           cache: npm
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Verify Vite Installation
+        run: npx vite --version
+
+      - name: Fix Vite Permissions
+        run: chmod +x node_modules/.bin/vite
 
       - name: Build the Project
         run: npm run build
