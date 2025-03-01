@@ -1,57 +1,57 @@
-name: Deploy to GitHub Pages
+# name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - stage # Runs when you push to the 'stage' branch
+# on:
+#   push:
+#     branches:
+#       - stage # Runs when you push to the 'stage' branch
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+#       - name: Install Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: npm
 
-      - name: Install Dependencies
-        run: npm ci
+#       - name: Install Dependencies
+#         run: npm ci
 
-      - name: Ensure Vite is Installed
-        run: npx vite --version
+#       - name: Ensure Vite is Installed
+#         run: npx vite --version
 
-      - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite
+#       - name: Fix Vite Permissions
+#         run: chmod +x node_modules/.bin/vite
 
-      - name: Build the Project
-        run: npm run build
-        shell: bash # Ensures proper execution
+#       - name: Build the Project
+#         run: npm run build
+#         shell: bash # Ensures proper execution
 
-      - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+#       - name: Deploy to GitHub Pages
+#         run: |
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Switch to gh-pages branch or create if missing
-          git checkout gh-pages || git checkout -b gh-pages
+#           # Switch to gh-pages branch or create if missing
+#           git checkout gh-pages || git checkout -b gh-pages
 
-          # Remove old files to prevent conflicts
-          git rm -rf .
+#           # Remove old files to prevent conflicts
+#           git rm -rf .
 
-          # Move new build files to root
-          cp -r dist/* .
+#           # Move new build files to root
+#           cp -r dist/* .
 
-          # Stage and commit changes with timestamp
-          git add --all
-          git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')"
+#           # Stage and commit changes with timestamp
+#           git add --all
+#           git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')"
 
-          # Push updates to GitHub Pages branch
-          git push origin gh-pages --force
+#           # Push updates to GitHub Pages branch
+#           git push origin gh-pages --force
