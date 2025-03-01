@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Stage Branch
         uses: actions/checkout@v4
         with:
-          ref: stage # Ensure we are on the stage branch
+          ref: stage
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -24,11 +24,13 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Clean Install Dependencies
+        run: |
+          rm -rf node_modules package-lock.json  # Remove existing modules
+          npm ci  # Ensure a clean install
 
       - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite # Allow Vite execution
+        run: chmod +x node_modules/.bin/vite # Ensure Vite can execute
 
       - name: Build the Project
         run: npm run build
