@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - stage # Runs when you push to the 'stage' branch
+      - stage # Runs when new changes are pushed to 'stage' branch
 
 permissions:
   contents: write
@@ -16,40 +16,28 @@ jobs:
       - name: Checkout Stage Branch
         uses: actions/checkout@v4
         with:
-          ref: stage
+          ref: stage # Checkout the 'stage' branch
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Clean Install Dependencies
+      - name: Copy Build Files
         run: |
-          rm -rf node_modules package-lock.json  # Remove old dependencies
-          npm install  # Fresh install
+          # Create a temporary folder to store build files
+          mkdir temp_dist
+          cp -r dist/* temp_dist/
 
-      - name: Fix Vite Permissions
-        run: chmod +x node_modules/.bin/vite # Ensure Vite has execution permissions
-
-      - name: Build the Project
-        run: npm run build
-
-      - name: Checkout gh-pages Branch
+      - name: Switch to gh-pages Branch
         run: |
           git fetch origin gh-pages
-          git checkout gh-pages
+          git checkout gh-pages || git checkout -b gh-pages
 
-      - name: Remove Old Files Except CNAME
-        run: find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
+          # Remove all files except 'CNAME'
+          find . -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
 
-      - name: Copy New Build Files from Stage Branch
+      - name: Move Copied Files to Root
         run: |
-          git checkout stage -- dist
-          cp -r dist/* .
-          rm -rf dist  # Clean up the dist folder
+          cp -r temp_dist/* .
+          rm -rf temp_dist  # Clean up temporary folder
 
-      - name: Deploy to GitHub Pages
+      - name: Commit and Push Changes
         run: |
           git add --all
           git commit -m "Deployed on $(date '+%Y-%m-%d %H:%M:%S IST')" || echo "No changes to commit"
