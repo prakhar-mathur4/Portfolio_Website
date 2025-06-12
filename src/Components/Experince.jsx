@@ -18,7 +18,7 @@ const Experience = () => {
         {/* Experience Card Component */}
         {[
           {
-            company: "Hexagon Technology Sdn. Bdh.",
+            company: "Lakshya Consultcy Inc",
             role: "Site Reliability Engineer",
             duration: "01/2024 - Present",
             logo: Hexagon,

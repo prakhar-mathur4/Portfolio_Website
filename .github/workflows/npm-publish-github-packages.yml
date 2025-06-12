@@ -1,4 +1,6 @@
-name: Deploy to Production
+name: Deploy to Stage Environment
+# This workflow deploys the application to the stage environment on Netlify
+# It is triggered on pushes to the 'stage' branch
 
 on:
   push:
