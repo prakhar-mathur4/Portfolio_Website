@@ -1,7 +1,7 @@
 import { useState } from "react";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import Experince from "./Components/Experince";
+import Experience from "./Components/Experience";
 import Fotter from "./Components/Fotter";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
@@ -19,7 +19,7 @@ function App() {
       <About />
       <Portfolio />
       <Skills />
-      <Experince />
+      <Experience />
       <Contact />
       <Fotter />
       <SocialLinks />

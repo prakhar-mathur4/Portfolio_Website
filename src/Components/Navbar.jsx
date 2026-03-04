@@ -43,6 +43,7 @@ const Navbar = () => {
               to={link}
               smooth
               duration={500}
+              offset={-80}
               className="hover:text-[#0061ff] transition duration-200"
             >
               {link}
@@ -101,6 +102,7 @@ const Navbar = () => {
                 to={link}
                 smooth
                 duration={500}
+                offset={-80}
               >
                 {link}
               </Link>
