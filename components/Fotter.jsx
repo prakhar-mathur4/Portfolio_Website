@@ -21,7 +21,7 @@ const Fotter = () => {
 
           {/* Nav links */}
           <nav className="flex items-center gap-6" aria-label="Footer navigation">
-            {["about", "experience", "skills", "portfolio", "contact"].map((section) => (
+            {["about", "experience", "skills", "portfolio", "blog", "contact"].map((section) => (
               <Link
                 key={section}
                 to={section}

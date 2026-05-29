@@ -4,11 +4,39 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
+import BlogStrip from "@/components/BlogStrip";
 import Contact from "@/components/Contact";
 import Fotter from "@/components/Fotter";
 import SocialLinks from "@/components/SocialLinks";
 
-export default function Page() {
+async function getMediumPosts() {
+  try {
+    const res = await fetch(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mathurprakhar1",
+      { next: { revalidate: 3600 } }
+    );
+    const data = await res.json();
+    if (data.status !== "ok") return [];
+
+    return data.items.map((item: any) => ({
+      title: item.title,
+      link: item.link,
+      date: new Date(item.pubDate).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }),
+      tags: (item.categories || []).slice(0, 3),
+      readTime: Math.max(1, Math.round(item.content.split(" ").length / 200)),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+export default async function Page() {
+  const posts = await getMediumPosts();
+
   return (
     <div className="bg-slate-50 min-h-screen text-gray-900 overflow-x-hidden">
       <Navbar />
@@ -18,6 +46,7 @@ export default function Page() {
         <Skills />
         <Experience />
         <Portfolio />
+        <BlogStrip posts={posts} />
         <Contact />
       </main>
       <Fotter />

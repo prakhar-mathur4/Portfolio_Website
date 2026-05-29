@@ -20,7 +20,8 @@ const Navbar = () => {
     { id: 2, link: "experience", label: "Experience" },
     { id: 3, link: "portfolio", label: "Projects" },
     { id: 4, link: "skills", label: "Skills" },
-    { id: 5, link: "contact", label: "Contact" },
+    { id: 5, link: "blog", label: "Blog" },
+    { id: 6, link: "contact", label: "Contact" },
   ];
 
   return (
