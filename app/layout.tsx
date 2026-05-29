@@ -54,6 +54,13 @@ export const metadata: Metadata = {
       "Building scalable, AI-ready infrastructure on AWS & Kubernetes. Expert in AIOps, MLOps, Kubernetes, Prometheus, and cloud-native reliability.",
     images: ["/og-preview.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({
@@ -95,7 +102,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-slate-50 text-gray-900 antialiased overflow-x-hidden">
+      <body className="bg-slate-50 text-gray-900 antialiased overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>
     </html>
