@@ -1,123 +1,167 @@
+import { motion } from "framer-motion";
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import {
+  HiOutlineServer,
+  HiOutlineDesktopComputer,
+  HiOutlineCode,
+  HiOutlineDatabase,
+  HiOutlineSparkles,
+  HiOutlineCog,
+} from "react-icons/hi";
 
-import ArgoCD from "../../src/assets/ArgoCD.png";
-import aws from "../../src/assets/aws.png";
-import azuree from "../../src/assets/Azure.png";
-import cplusplus from "../../src/assets/c++.png";
-import css from "../../src/assets/css.png";
-import Docker from "../../src/assets/Docker.png";
-import Elasticsearch from "../../src/assets/Elasticsearch.png";
-import github from "../../src/assets/github.png";
-import Grafana from "../../src/assets/Grafana.svg";
-import html5 from "../../src/assets/HTML5.png";
-import javascript from "../../src/assets/javscript.png";
-import Jira from "../../src/assets/Jira.png";
-import Kafka from "../../src/assets/Kafka.png";
-import keras from "../../src/assets/keras.png";
-import Kibana from "../../src/assets/Kibana.png";
-import k8s from "../../src/assets/Kubernetes.png";
-import Linux from "../../src/assets/Linux.png";
-import mysql from "../../src/assets/mysql.png";
-import NewRelic from "../../src/assets/NewRelic.png";
-import postgresql from "../../src/assets/postgresql.png";
-import powerbi from "../../src/assets/powerbi.png";
-import Prometheus from "../../src/assets/Prometheus.png";
-import python from "../../src/assets/python.png";
-import reactjs from "../../src/assets/reactjs.png";
-import Robusta from "../../src/assets/Robusta.svg";
-import sklearn from "../../src/assets/sklearn.png";
-import TailwindCSS from "../../src/assets/tailwindcss.png";
-import tensorflow from "../../src/assets/tensorflow.png";
-import Terraform from "../../src/assets/Terraform.png";
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.08, ease: "easeOut" },
+  }),
+};
 
-const Experience = () => {
-  const techs = [
-    { id: 1, src: Linux, title: "Linux" },
-    { id: 2, src: cplusplus, title: "C++" },
-    { id: 3, src: python, title: "Python" },
-    { id: 4, src: aws, title: "AWS" },
-    { id: 5, src: azuree, title: "Azure" },
-    { id: 5, src: github, title: "GitHub" },
-    { id: 7, src: Docker, title: "Docker" },
-    { id: 8, src: k8s, title: "Kubernetes" },
-    { id: 9, src: Robusta, title: "Robusta" },
-    { id: 10, src: Kibana, title: "Kibana" },
-    { id: 11, src: ArgoCD, title: "ArgoCD" },
-    { id: 12, src: Elasticsearch, title: "Elasticsearch" },
-    { id: 13, src: Prometheus, title: "Prometheus" },
-    { id: 14, src: Grafana, title: "Grafana" },
-    { id: 15, src: Terraform, title: "Terraform" },
-    { id: 16, src: NewRelic, title: "New Relic" },
-    { id: 17, src: Jira, title: "Jira" },
-    { id: 18, src: mysql, title: "MySQL" },
-    { id: 19, src: postgresql, title: "PostgreSQL" },
-    { id: 20, src: Kafka, title: "Kafka" },
-    { id: 21, src: html5, title: "HTML" },
-    { id: 22, src: css, title: "CSS" },
-    { id: 23, src: javascript, title: "JavaScript" },
-    { id: 24, src: reactjs, title: "ReactJS" },
-    { id: 25, src: TailwindCSS, title: "TailwindCSS" },
-    { id: 26, src: tensorflow, title: "Tensorflow" },
-    { id: 27, src: keras, title: "Keras" },
-    { id: 28, src: sklearn, title: "Scikit-Learn" },
-    { id: 29, src: powerbi, title: "Power BI" },
-  ];
+const categories = [
+  {
+    icon: <HiOutlineServer size={22} />,
+    label: "Infrastructure & Cloud",
+    desc: "Cloud platforms, container orchestration, and infrastructure automation at scale.",
+    skills: ["Linux", "AWS", "Azure", "Docker", "Kubernetes", "Terraform", "ArgoCD"],
+    accent: "blue",
+  },
+  {
+    icon: <HiOutlineDesktopComputer size={22} />,
+    label: "Observability",
+    desc: "Monitoring, logging, alerting, and full-stack observability for production systems.",
+    skills: ["Prometheus", "Grafana", "New Relic", "Elasticsearch", "Kibana", "Robusta", "DataDog"],
+    accent: "blue",
+  },
+  {
+    icon: <HiOutlineCode size={22} />,
+    label: "Languages & Dev",
+    desc: "Programming languages and frontend technologies for tooling and automation.",
+    skills: ["Python", "C++", "JavaScript", "ReactJS", "TailwindCSS", "HTML", "CSS"],
+    accent: "blue",
+  },
+  {
+    icon: <HiOutlineDatabase size={22} />,
+    label: "Data & ML",
+    desc: "Data engineering, machine learning frameworks, and database management.",
+    skills: ["Tensorflow", "Keras", "Scikit-Learn", "Power BI", "PostgreSQL", "MySQL", "Kafka"],
+    accent: "blue",
+  },
+  {
+    icon: <HiOutlineSparkles size={22} />,
+    label: "AIOps & Automation",
+    desc: "AI-powered operations, intelligent alerting, and workflow automation.",
+    skills: ["AIOps", "MLOps", "Ansible", "GitHub Actions", "CI/CD", "Bash"],
+    accent: "blue",
+  },
+  {
+    icon: <HiOutlineCog size={22} />,
+    label: "Tools & Platforms",
+    desc: "Developer tools, project management, and collaboration platforms.",
+    skills: ["GitHub", "Jira", "Postman", "Lens", "Graylog", "Argo CD"],
+    accent: "blue",
+  },
+];
 
-  const settings = {
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    // pauseOnHover: true,
-    arrows: false,
-    rtl: true,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 4 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
-      { breakpoint: 640, settings: { slidesToShow: 2 } },
-    ],
-  };
-
+const Skills = () => {
   return (
-    <div
+    <section
+      id="skills"
       name="skills"
-      className="pt-16 md:pt-20 bg-gradient-to-b from-gray-800 to-black w-full text-white"
+      className="py-20 border-b border-gray-100"
+      aria-label="Skills and Tech Stack"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full">
-        <div className="mb-8">
-          <p className="text-4xl font-bold border-b-4 border-gray-500 inline">
-            Skills
-          </p>
-          <p className="py-4">
-            These are the tools & technologies I've worked with.
-          </p>
-        </div>
 
-        {/* Skills Carousel */}
-        <Slider {...settings}>
-          {techs.map(({ id, src, title }) => (
-            <div
-              key={id}
-              className="flex flex-col items-center justify-center w-32 h-32 md:w-36 md:h-36"
-            >
-              <img
-                src={src}
-                alt={title}
-                className="w-20 h-20 md:w-24 md:h-24 object-contain"
-              />
-              {/* <p className="mt-2 text-sm sm:text-base text-center">{title}</p> */}
+      {/* Header */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mb-12"
+      >
+        <p className="text-xs tracking-[0.3em] font-semibold text-blue-500 mb-5 flex items-center gap-3">
+          SKILLS & EXPERTISE{" "}
+          <span className="flex-1 max-w-[40px] h-px bg-blue-400 inline-block" />
+        </p>
+        <h2 className="text-3xl xl:text-4xl font-bold text-gray-900 leading-tight mb-3">
+          SRE & DevOps Tech Stack — Kubernetes, AWS, Terraform & More
+          <span className="text-blue-500">.</span>
+        </h2>
+        <p className="text-sm text-gray-500 max-w-lg">
+          A production-grade stack built around Site Reliability Engineering, cloud-native infrastructure,
+          observability, automation, and AIOps.
+        </p>
+      </motion.div>
+
+      {/* Category cards grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+        {categories.map(({ icon, label, desc, skills }, i) => (
+          <motion.div
+            key={label}
+            custom={i * 0.08}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200 flex flex-col"
+          >
+            {/* Icon + title */}
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500 shrink-0" aria-hidden="true">
+                {icon}
+              </div>
+              <h3 className="text-sm font-bold text-gray-900">{label}</h3>
             </div>
-          ))}
-        </Slider>
+
+            {/* Description */}
+            <p className="text-xs text-gray-500 leading-relaxed mb-5">{desc}</p>
+
+            {/* Skill list */}
+            <ul
+              className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 list-none"
+              aria-label={`${label} skills`}
+            >
+              {skills.map((skill) => (
+                <li key={skill}>
+                  <span className="text-[11px] font-medium text-gray-600 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-lg hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors duration-150 cursor-default block">
+                    {skill}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
       </div>
-    </div>
+
+      {/* Bottom strip */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-8 grid grid-cols-2 xl:grid-cols-4 border border-gray-100 rounded-2xl bg-white shadow-sm overflow-hidden"
+      >
+        {[
+          { value: "30+", label: "Technologies", sub: "Across cloud, infra & dev" },
+          { value: "6", label: "Core Categories", sub: "Infra, Obs, Dev, Data, AI, Tools" },
+          { value: "3+", label: "Years Hands-on", sub: "Production-grade experience" },
+          { value: "Always", label: "Learning", sub: "AIOps, MLOps & cloud-native" },
+        ].map(({ value, label, sub }, i) => (
+          <div
+            key={i}
+            className="flex flex-col p-6 border-r border-gray-100 last:border-r-0 border-b xl:border-b-0 hover:bg-blue-50/40 transition-colors duration-200"
+          >
+            <p className="text-xl font-bold text-blue-500 mb-0.5">{value}</p>
+            <p className="text-xs font-semibold text-gray-700 tracking-wide">{label}</p>
+            <p className="text-[11px] text-gray-400 mt-0.5">{sub}</p>
+          </div>
+        ))}
+      </motion.div>
+
+    </section>
   );
 };
 
-export default Experience;
+export default Skills;

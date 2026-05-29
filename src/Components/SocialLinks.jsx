@@ -1,72 +1,40 @@
 import React from "react";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const SocialLinks = () => {
   const links = [
-    {
-      id: 1,
-      child: (
-        <>
-          LinkedIn <FaLinkedin size={30} />
-        </>
-      ),
-      href: "https://www.linkedin.com/in/mathurprakhar1/",
-      style: "rounded-tr-md",
-    },
-    {
-      id: 2,
-      child: (
-        <>
-          GitHub <FaGithub size={30} />
-        </>
-      ),
-      href: "https://github.com/prakhar-mathur4",
-    },
-    {
-      id: 3,
-      child: (
-        <>
-          Mail <HiOutlineMail size={30} />
-        </>
-      ),
-      href: "mailto:mathurprakhar1@gmail.com",
-    },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      href: "https://drive.google.com/file/d/1XZUV8UJaaP6FdoxNIhHCHc8lwkO1_idG/view?usp=drive_link", // Replace this with your actual resume link
-      style: "rounded-br-md",
-      download: true,
-    },
+    { id: 1, icon: <FaLinkedin size={15} />, label: "LINKEDIN", href: "https://www.linkedin.com/in/mathurprakhar1/" },
+    { id: 2, icon: <FaGithub size={15} />, label: "GITHUB", href: "https://github.com/prakhar-mathur4" },
+    { id: 3, icon: <MdOutlineEmail size={16} />, label: "EMAIL", href: "mailto:mathurprakhar1@gmail.com" },
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
-      <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] 
-              hover:ml-[-10px] hover:rounded-md transition-all duration-500 ease-in-out bg-gray-500 ${style}`}
+    <div className="hidden lg:flex flex-col items-center gap-5 fixed top-1/2 -translate-y-1/2 left-7">
+      {links.map(({ id, icon, label, href }) => (
+        <a
+          key={id}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-col items-center gap-1.5 group"
+        >
+          <span className="text-gray-400 group-hover:text-blue-600 transition-colors duration-200">{icon}</span>
+          <span
+            className="text-gray-400 group-hover:text-blue-600 transition-colors duration-200"
+            style={{
+              fontSize: "9px",
+              letterSpacing: "0.18em",
+              writingMode: "vertical-rl",
+              transform: "rotate(180deg)",
+            }}
           >
-            <a
-              href={href}
-              className="flex justify-between items-center w-full text-white"
-              download={download}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {child}
-            </a>
-          </li>
-        ))}
-      </ul>
+            {label}
+          </span>
+        </a>
+      ))}
+      <div className="w-px h-10 bg-gray-300 mt-1" />
+      <div className="w-2 h-2 rounded-full bg-blue-500" />
     </div>
   );
 };
