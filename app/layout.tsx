@@ -1,12 +1,28 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, DM_Mono } from "next/font/google";
 import "./globals.css";
+
+const SITE_URL = "https://prakharmathur.in";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-dm-mono",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#f8fafc",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Prakhar Mathur | Site Reliability Engineer & AIOps Specialist",
@@ -27,9 +43,9 @@ export const metadata: Metadata = {
     "Terraform",
     "Platform Engineering",
   ],
-  authors: [{ name: "Prakhar Mathur", url: "https://prakhar-mathur4.github.io/" }],
+  authors: [{ name: "Prakhar Mathur", url: SITE_URL }],
   creator: "Prakhar Mathur",
-  metadataBase: new URL("https://prakhar-mathur4.github.io/"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
@@ -41,7 +57,7 @@ export const metadata: Metadata = {
     title: "Prakhar Mathur | Site Reliability Engineer & AIOps Specialist",
     description:
       "Building scalable, AI-ready infrastructure on AWS & Kubernetes. Specializing in AIOps, MLOps observability, automation, and cloud-native systems.",
-    url: "https://prakhar-mathur4.github.io/",
+    url: SITE_URL,
     siteName: "Prakhar Mathur Portfolio",
     locale: "en_US",
     type: "website",
@@ -69,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${dmMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -81,7 +97,7 @@ export default function RootLayout({
               jobTitle: "Site Reliability Engineer",
               description:
                 "Site Reliability Engineer and AIOps Specialist with 3+ years building scalable cloud infrastructure on AWS and Kubernetes.",
-              url: "https://prakhar-mathur4.github.io/",
+              url: SITE_URL,
               email: "mathurprakhar1@gmail.com",
               sameAs: [
                 "https://www.linkedin.com/in/mathurprakhar1/",

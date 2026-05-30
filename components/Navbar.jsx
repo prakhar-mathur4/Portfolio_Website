@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -32,7 +33,7 @@ const Navbar = () => {
     >
       <div className="w-full max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-10 md:px-20 2xl:px-28 h-20 flex items-center justify-between">
         <Link to="home" smooth duration={500} offset={-96} className="cursor-pointer" aria-label="Prakhar Mathur — go to top">
-          <img src="/assets/Prakhar_mathur_logoBlack.png" alt="Prakhar Mathur logo" className="h-14 w-auto object-contain" />
+          <Image src="/assets/Prakhar_mathur_logoBlack.png" alt="Prakhar Mathur logo" width={180} height={56} priority className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop */}
