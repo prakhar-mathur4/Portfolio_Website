@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Blog | Prakhar Mathur — SRE & AIOps Writing",
     description:
       "Practical SRE articles on Kubernetes, AIOps, observability, and cloud infrastructure.",
-    url: "https://prakhar-mathur4.github.io/blog",
+    url: "https://prakharmathur.in/blog",
     type: "website",
   },
 };
@@ -59,5 +59,37 @@ async function getMediumPosts() {
 
 export default async function Page() {
   const posts = await getMediumPosts();
-  return <BlogPage posts={posts} />;
+
+  const blogLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Blog | Prakhar Mathur — SRE, Kubernetes & AIOps Articles",
+    url: "https://prakharmathur.in/blog",
+    author: {
+      "@type": "Person",
+      name: "Prakhar Mathur",
+      url: "https://prakharmathur.in",
+    },
+    blogPost: posts.map((post: { title: string; link: string; date: string }) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: post.link,
+      datePublished: post.date,
+      author: {
+        "@type": "Person",
+        name: "Prakhar Mathur",
+        url: "https://prakharmathur.in",
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }}
+      />
+      <BlogPage posts={posts} />
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
@@ -132,12 +133,24 @@ const Portfolio = () => {
           >
             {/* Image */}
             <div className="relative overflow-hidden h-44 bg-gray-50">
-              <img
-                src={src}
-                alt={name}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
+              {src.startsWith("/") ? (
+                <Image
+                  src={src}
+                  alt={name}
+                  width={400}
+                  height={176}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              ) : (
+                <img
+                  src={src}
+                  alt={name}
+                  width={400}
+                  height={176}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              )}
               <div className="absolute top-3 left-3">
                 <span className="text-[10px] font-semibold tracking-wider bg-white/90 text-gray-600 border border-gray-200 px-2 py-0.5 rounded-full backdrop-blur-sm">
                   {type}

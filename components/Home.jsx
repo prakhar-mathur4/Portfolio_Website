@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import { Link } from "react-scroll";
 import { FaArrowRight, FaChartLine, FaCloud, FaCode } from "react-icons/fa";
@@ -94,9 +95,12 @@ const Home = () => {
 
             {/* Illustration */}
             <div className="relative z-10 w-full">
-              <img
+              <Image
                 src="/assets/hero-illustration.png"
                 alt="Prakhar Mathur — Site Reliability Engineer and AIOps Specialist"
+                width={620}
+                height={620}
+                priority
                 className="w-full h-auto object-contain"
                 style={{ mixBlendMode: "multiply" }}
               />
