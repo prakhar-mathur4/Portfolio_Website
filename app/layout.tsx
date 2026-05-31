@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, DM_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const SITE_URL = "https://prakharmathur.in";
@@ -120,6 +122,8 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-50 text-gray-900 antialiased overflow-x-hidden" suppressHydrationWarning>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

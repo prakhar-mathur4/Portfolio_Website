@@ -75,7 +75,7 @@ const BlogPage = ({ posts = [] }) => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search articles or tags..."
-              className="w-full pl-9 pr-4 py-3 text-sm border border-gray-200 rounded-xl bg-white focus:outline-none focus:border-blue-300 transition-colors placeholder-gray-300"
+              className="w-full pl-9 pr-4 py-3 text-sm border border-gray-200 rounded-xl bg-white focus:outline-none focus:border-blue-300 transition-colors placeholder-gray-500"
             />
           </div>
         </motion.div>

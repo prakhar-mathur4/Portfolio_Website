@@ -6,7 +6,7 @@ import Experience from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
 import BlogStrip from "@/components/BlogStrip";
 import Contact from "@/components/Contact";
-import Fotter from "@/components/Fotter";
+import Footer from "@/components/Footer";
 import SocialLinks from "@/components/SocialLinks";
 
 const ALLOWED_DOMAINS = ["medium.com", "mathurprakhar1.medium.com"];
@@ -66,7 +66,7 @@ export default async function Page() {
         <BlogStrip posts={posts} />
         <Contact />
       </main>
-      <Fotter />
+      <Footer />
       <SocialLinks />
     </div>
   );
