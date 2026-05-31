@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
-const Fotter = () => {
+const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-gray-100 bg-white" aria-label="Footer">
@@ -79,4 +79,4 @@ const Fotter = () => {
   );
 };
 
-export default Fotter;
+export default Footer;

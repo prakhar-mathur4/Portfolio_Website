@@ -132,7 +132,7 @@ const Contact = () => {
                   id="contact-name"
                   type="text"
                   name="name"
-                  className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-300 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
+                  className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
                   placeholder="Your name"
                   required
                 />
@@ -145,7 +145,7 @@ const Contact = () => {
                   id="contact-email"
                   type="email"
                   name="email"
-                  className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-300 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
+                  className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
                   placeholder="your@email.com"
                   required
                 />
@@ -159,7 +159,7 @@ const Contact = () => {
                 id="contact-subject"
                 type="text"
                 name="subject"
-                className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-300 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
+                className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white transition-all duration-150"
                 placeholder="SRE opportunity / project collaboration"
               />
             </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                 id="contact-message"
                 name="message"
                 rows="4"
-                className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-300 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white resize-none transition-all duration-150"
+                className="border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-50 focus:outline-none focus:border-blue-300 focus:bg-white resize-none transition-all duration-150"
                 placeholder="Tell me about the opportunity or project..."
                 required
               />
